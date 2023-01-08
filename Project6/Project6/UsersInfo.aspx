@@ -8,20 +8,20 @@
 
     <br /><br />
      <div class="wizad">
-<asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="3" BackColor="#DFF6FF"
+<asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="0" BackColor="#DFF6FF"
     Font-Names="Verdana" Font-Size="0.8em" Height="900px" Width="97.75%" FinishCompleteButtonText="Users"
     FinishPreviousButtonText="Services" OnActiveStepChanged="Wizard1_ActiveStepChanged" OnFinishButtonClick="Wizard1_FinishButtonClick1" 
    >
         <FinishCompleteButtonStyle BackColor="#06283D" Font-Names="Times New Roman" Font-Size="15px" ForeColor="#DFF6FF" Height="40px" Width="70px" />
         <FinishPreviousButtonStyle BackColor="#06283D" Font-Names="Times New Roman" Font-Size="15px" ForeColor="#DFF6FF" Height="40px" Width="70px" />
-        <HeaderStyle BackColor="#06283D" BorderColor="#E6E2D8" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+        <HeaderStyle BackColor="#FFCCFF" BorderColor="#E6E2D8" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
         <NavigationButtonStyle BackColor="White" BorderColor="#C5BBAF" BorderStyle="Solid" BorderWidth="1px" Font-Names="Times New Roman" Font-Size="0.8em" ForeColor="#1C5E55" />
         <NavigationStyle BackColor="#DFF6FF" BorderColor="#DFF6FF" />
         <StartNextButtonStyle BackColor="#06283D" Font-Size="15px" ForeColor="#DFF6FF" Height="40px" Width="70px" Font-Names="Times New Roman" />
         <StepNextButtonStyle BackColor="#06283D" Font-Size="15px" Font-Underline="True" ForeColor="#DFF6FF" Height="40px" Width="70px" Font-Names="Times New Roman" />
         <StepPreviousButtonStyle BackColor="#06283D" Font-Size="15px" ForeColor="#DFF6FF" Height="40px" Width="70px" Font-Names="Times New Roman" />
-        <SideBarButtonStyle ForeColor="#DFF6FF" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="20px" Height="100px" />
-        <SideBarStyle BackColor="#06283D" Font-Size="0.9em" VerticalAlign="Middle" Width="170px" ForeColor="#DFF6FF" HorizontalAlign="Left"/>
+        <SideBarButtonStyle ForeColor="#DFF6FF" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="20px" Height="100px" BorderColor="#06283D" />
+        <SideBarStyle BackColor="#06283D" Font-Size="0.9em" VerticalAlign="Middle" Width="250px" ForeColor="#DFF6FF" HorizontalAlign="Center" BorderColor="#06283D" BorderStyle="Solid"/>
         <StepStyle BackColor="#DFF6FF" BorderColor="#DFF6FF" BorderStyle="Solid" BorderWidth="2px" HorizontalAlign="Center" VerticalAlign="Top" Width="900px" Font-Names="Times New Roman" />
         <WizardSteps>
            
@@ -31,25 +31,94 @@
                 <div class="divv">
                 <asp:Label ID="adddlab" runat="server" Text="Welcome Admin" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
                 </div>
-                <br />
-                
-                <br />
-                <div class="perdiv">
+                <br /><br /><br /><br />
+                <br /><br /><br /><br />
+<%--                <div class="perdiv">
                 <asp:Label ID="Label6" runat="server" Text="" CssClass="percUlab "></asp:Label>
                 <asp:Label ID="Label7" runat="server" Text="" CssClass="percPlab "></asp:Label>
                 </div>
                 <br />
                 <asp:Image ID="Image1" runat="server" ImageUrl="~\img\DON.jfif" CssClass="admIMG"/>
-                <br />
-                
+                <br />--%>
+                <%--                //////////////////////////////////////////////--%>
+                 <div class="flex-wrapper">
+        <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+                <path class="circle-bg"
+                    d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path id="percent1" runat="server" class="circle"
+                    d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text id="firstPercent" runat="server" x="18" y="20.35" class="percentage"></text>
+            </svg>
+        </div>
+
+       <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart green">
+                <path class="circle-bg"
+                    d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path id="percent2" runat="server" class="circle"
+                    d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text id="secPercent" runat="server" x="18" y="20.35" class="percentage"></text>
+            </svg>
+        </div>
+        <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart blue">
+                <path class="circle-bg"
+                    d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path id="percent3" class="circle" runat="server"
+                    d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text id="thirdPercent" runat="server" x="18" y="20.35" class="percentage"></text>
+            </svg>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: space-around; width: 100%;">
+        <h4>Beneficiary</h4>
+         <h4>Donations</h4>
+        <h4>Doners</h4>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div style="display: flex; justify-content: space-evenly; width: 100%;">
+        <div style="font-size: 25px">
+            <span>
+                <asp:Label Style="font-size: 55px" ID="BB" runat="server" Text="Label" ForeColor="#FF9F29"></asp:Label>
+            </span>&nbsp;&nbsp;Beneficiary
+        </div>
+        <div style="font-size: 25px">
+            <span>
+                <asp:Label Style="font-size: 55px" ID="DON" runat="server" Text="Label" ForeColor="#FF9F29"></asp:Label>
+            </span>&nbsp;&nbsp;Donations
+        </div>
+         <div style="font-size: 25px">
+            <span>
+                <asp:Label Style="font-size: 55px" ID="DD" runat="server" Text="Label" ForeColor="#FF9F29"></asp:Label>
+            </span>&nbsp;&nbsp;Doners
+        </div>
+    </div>
+<%--                //////////////////////////////////////////////--%>
             </asp:WizardStep>
            
            
-            <asp:WizardStep runat="server" title="Users" ID="usr">
+            <asp:WizardStep runat="server" title="Beneficiary" ID="usr">
                <br />
                 <br /><br />
                 <div class="divv">
-                <asp:Label ID="Label1" runat="server" Text="User Information Page" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Beneficiary Information" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
                 </div>
                 
                     <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Project6ConnectionString %>" SelectCommand="SELECT * FROM [AspNetUsers] WHERE ([UserName] LIKE '%' + @UserName + '%')">
@@ -68,10 +137,9 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="Id,UserId,RoleId" Height="300px" HorizontalAlign="Center" Width="85%" CssClass="headerT" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
+                        <asp:BoundField DataField="UserName" HeaderText="Beneficiary" SortExpression="UserName" />
                         <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                        <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
-                        <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="UserDetails.aspx?id={0}&amp;f=1" Text="show more" />
+                        <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" />
                     </Columns>
                     <EditRowStyle HorizontalAlign="Center" VerticalAlign="Middle" BackColor="#2461BF" />
                     <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Middle" />
@@ -88,10 +156,10 @@
                </div>
             </asp:WizardStep>
 
-            <asp:WizardStep runat="server" title="Provider" ID="prov" >
+            <asp:WizardStep runat="server" title="Doners" ID="prov" >
                 <br />  <br /><br />
                 <div class="divv">
-                <asp:Label ID="Label5" runat="server" Text="Providers Information Page" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="Doners Information" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
                 </div>
                 
                      <br /><br /><br /><br />
@@ -103,10 +171,9 @@
                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" DataKeyNames="Id,UserId,RoleId" Height="300px" HorizontalAlign="Center" Width="85%" CssClass="headerT" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
+                        <asp:BoundField DataField="UserName" HeaderText="Doners" SortExpression="UserName" />
                         <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                        <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
-                        <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="UserDetails.aspx?id={0}" Text="show more" />
+                        <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" />
                     </Columns>
                     <EditRowStyle HorizontalAlign="Center" VerticalAlign="Middle" BackColor="#2461BF" />
                     <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Middle" />
@@ -123,10 +190,10 @@
                </div>
             </asp:WizardStep>
 
-            <asp:WizardStep runat="server" Title="Services" ID="ser">  
+            <asp:WizardStep runat="server" Title="Donations" ID="ser">  
                  <br /><br /><br />
                  <div class="divv">
-                <asp:Label ID="Label2" runat="server" Text="Service Page" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="Donations" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
                 </div>
                 
                  <br /><br /><br /><br />
@@ -173,8 +240,8 @@
                 <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource6" DataKeyNames="ServiceID" Height="300px" HorizontalAlign="Center" Width="85%" CssClass="headerT" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:BoundField DataField="ServiceID" HeaderText="ServiceID" SortExpression="ServiceID" InsertVisible="False" ReadOnly="True" />
-                        <asp:BoundField DataField="ServiceName" HeaderText="ServiceName" SortExpression="ServiceName" />
+                        <asp:BoundField DataField="ServiceID" HeaderText="ID" SortExpression="ServiceID" InsertVisible="False" ReadOnly="True" />
+                        <asp:BoundField DataField="ServiceName" HeaderText="Name" SortExpression="ServiceName" />
                         <asp:TemplateField HeaderText="Image" SortExpression="Image">
                             <EditItemTemplate>
                                 <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Image") %>'></asp:TextBox>
@@ -201,11 +268,11 @@
 
             </asp:WizardStep>
 
-            <asp:WizardStep runat="server" Title="Waiting Services" ID="waser">
+            <asp:WizardStep runat="server" Title="Waiting Donations" ID="waser">
                 <br /><br />
 
                 <div class="divv">
-                <asp:Label ID="Label3" runat="server" Text="Waiting Service Page" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Waiting Donations" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
                 </div>
                 
 <%--                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>--%>
@@ -243,11 +310,11 @@
                     </UpdateParameters>
                 </asp:SqlDataSource>
                 <div class="grr">
-                <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" DataKeyNames="ServiceID" Height="300px" HorizontalAlign="Center" Width="85%" CssClass="headerT" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" EmptyDataText="No Data Found" OnRowCommand="GridView4_RowCommand1">
+                <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" DataKeyNames="ServiceID" Height="300px" HorizontalAlign="Center" Width="85%" CssClass="headerT" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" EmptyDataText="No Requests" OnRowCommand="GridView4_RowCommand1">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:BoundField DataField="ServiceID" HeaderText="ServiceID" SortExpression="ServiceID" InsertVisible="False" ReadOnly="True" />
-                        <asp:BoundField DataField="ServiceName" HeaderText="ServiceName" SortExpression="ServiceName" />
+                        <asp:BoundField DataField="ServiceID" HeaderText="ID" SortExpression="ServiceID" InsertVisible="False" ReadOnly="True" />
+                        <asp:BoundField DataField="ServiceName" HeaderText="Name" SortExpression="ServiceName" />
                         <asp:TemplateField HeaderText="Image" SortExpression="Image">
                             <EditItemTemplate>
                                 <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Image") %>'></asp:TextBox>

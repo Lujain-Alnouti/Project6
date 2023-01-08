@@ -60,9 +60,36 @@ namespace Project6
             int xxx = Convert.ToInt32(userper);
             double provper=(p / tot)*100;
             int yyy= Convert.ToInt32(provper);
+            /***************************************************************/
+            string all = $"select COUNT(*) FROM Services";
+            SqlCommand commandall = new SqlCommand(all, Con);
+            string NUMALL = commandall.ExecuteScalar().ToString();
+            double allD = Convert.ToDouble(NUMALL);
+            Session["ALLDon"] = allD;
+            /**************************************************************/
+            string app = $"select COUNT(*) FROM Services where Status=1";
+            SqlCommand commandapp = new SqlCommand(app, Con);
+            string NUMApp = commandapp.ExecuteScalar().ToString();
+            double appro = Convert.ToDouble(NUMApp);
+            Session["approval"] = appro;
+            double donaPer = (appro / allD) * 100;
+            int IdonaPer= Convert.ToInt32(donaPer);
+            /***************************************************************/
             Con.Close();
-            Label6.Text = "The Number Of Users Is : " + Session["usernum"]+ "<br/> <span style='color:red; font-weight:bold'> (" + xxx + " % )</span> ";
-            Label7.Text = "The Number Of Donors Is : " + Session["provnum"] + "<br/> <span style='color:red; font-weight:bold'> (" + yyy + " % )</span>";
+            percent1.Attributes.Add("stroke-dasharray", $"{xxx}, 100");
+            firstPercent.InnerText = Convert.ToString(xxx) + "%";
+
+            percent2.Attributes.Add("stroke-dasharray", $"{IdonaPer}, 100");
+            secPercent.InnerText = Convert.ToString(IdonaPer) + "%";
+
+            percent3.Attributes.Add("stroke-dasharray", $"{yyy}, 100");
+            thirdPercent.InnerText = Convert.ToString(yyy) + "%";
+            //Label6.Text = "The Number Of Users Is : " + Session["usernum"]+ "<br/> <span style='color:red; font-weight:bold'> (" + xxx + " % )</span> ";
+            //Label7.Text = "The Number Of Donors Is : " + Session["provnum"] + "<br/> <span style='color:red; font-weight:bold'> (" + yyy + " % )</span>";
+            BB.Text = u.ToString();
+            DD.Text = p.ToString();
+            DON.Text = appro.ToString();
+
 
         }
 
