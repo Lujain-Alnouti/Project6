@@ -18,18 +18,17 @@ namespace Project6
 
             if (Request.QueryString["bb"] =="1")
             {
-                Wizard1.ActiveStepIndex = 3;
+                Wizard1.ActiveStepIndex = 2;
             }
-            else if (Request.QueryString["bb"] == "2") { Wizard1.ActiveStepIndex = 4; }
+            else if (Request.QueryString["bb"] == "2") { Wizard1.ActiveStepIndex = 3; }
            else if (Request.QueryString["x"] != null)
             {
-                Wizard1.ActiveStepIndex = 4;
+                Wizard1.ActiveStepIndex = 3;
             }
            else if (Request.QueryString["c"] == "c")
             {
                 Wizard1.ActiveStepIndex = 1;
             }
-            else if(Request.QueryString["c"] == "p") { Wizard1.ActiveStepIndex = 2; }
             else Wizard1.ActiveStepIndex = 0;
 
             var connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;

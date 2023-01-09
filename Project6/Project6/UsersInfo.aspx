@@ -1,14 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UsersInfo.aspx.cs" Inherits="Project6.WebForm1" %>
 
 
-<%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
+<%--<%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>--%>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+  
     <br /><br />
      <div class="wizad">
-<asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="0" BackColor="#DFF6FF"
+          
+<asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="3" BackColor="#DFF6FF"
     Font-Names="Verdana" Font-Size="0.8em" Height="900px" Width="97.75%" FinishCompleteButtonText="Users"
     FinishPreviousButtonText="Services" OnActiveStepChanged="Wizard1_ActiveStepChanged" OnFinishButtonClick="Wizard1_FinishButtonClick1" 
    >
@@ -54,6 +55,7 @@
           a 15.9155 15.9155 0 0 1 0 -31.831" />
                 <text id="firstPercent" runat="server" x="18" y="20.35" class="percentage"></text>
             </svg>
+            <h4>Beneficiary</h4>
         </div>
 
        <div class="single-chart">
@@ -67,7 +69,8 @@
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831" />
                 <text id="secPercent" runat="server" x="18" y="20.35" class="percentage"></text>
-            </svg>
+            </svg>         <h4>Donations</h4>
+
         </div>
         <div class="single-chart">
             <svg viewBox="0 0 36 36" class="circular-chart blue">
@@ -80,13 +83,13 @@
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831" />
                 <text id="thirdPercent" runat="server" x="18" y="20.35" class="percentage"></text>
-            </svg>
+            </svg><h4>Doners</h4>
         </div>
     </div>
     <div style="display: flex; justify-content: space-around; width: 100%;">
-        <h4>Beneficiary</h4>
-         <h4>Donations</h4>
-        <h4>Doners</h4>
+       <%-- <h4>Beneficiary</h4>--%>
+<%--         <h4>Donations</h4>--%>
+        <%--<h4>Doners</h4>--%>
     </div>
     <br />
     <br />
@@ -156,7 +159,7 @@
                </div>
             </asp:WizardStep>
 
-            <asp:WizardStep runat="server" title="Doners" ID="prov" >
+            <%--<asp:WizardStep runat="server" title="Doners" ID="prov" >
                 <br />  <br /><br />
                 <div class="divv">
                 <asp:Label ID="Label5" runat="server" Text="Doners Information" Font-Bold="True" Font-Italic="True" Font-Names="Times New Roman" Font-Size="40px" ForeColor="#06283D"></asp:Label>
@@ -188,7 +191,7 @@
                     <SortedDescendingHeaderStyle HorizontalAlign="Center" BackColor="#4870BE" />
                 </asp:GridView>
                </div>
-            </asp:WizardStep>
+            </asp:WizardStep>--%>
 
             <asp:WizardStep runat="server" Title="Donations" ID="ser">  
                  <br /><br /><br />

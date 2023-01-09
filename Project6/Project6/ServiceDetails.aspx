@@ -10,16 +10,20 @@
             font-style:italic;
             font-weight:bold;"></asp:Label>
 
-            </div><br /><br /><br />
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="ServiceID,Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="426px" Width="94%" OnPageIndexChanging="DetailsView1_PageIndexChanging">
-        <AlternatingRowStyle BackColor="White" BorderColor="#06283D" Font-Names="Times New Roman" Font-Size="25px" Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" ForeColor="#06283D" />
-        <CommandRowStyle BackColor="#06283D" BorderColor="#A6D9EE" Font-Bold="True" HorizontalAlign="Center" VerticalAlign="Middle" ForeColor="#DFF6FF" />
+            </div><br />
+         
+        <div >
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="ServiceID,Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="500px" Width="70%" OnPageIndexChanging="DetailsView1_PageIndexChanging" CssClass="marrL" >
+    
+        <AlternatingRowStyle BackColor="White" BorderColor="#06283D" Font-Names="Times New Roman" Font-Size="25px" Font-Underline="False" HorizontalAlign="Left" VerticalAlign="Middle" ForeColor="#06283D" />
+        <CommandRowStyle BackColor="#06283D" BorderColor="#A6D9EE" Font-Bold="True" HorizontalAlign="Left" VerticalAlign="Middle" ForeColor="#DFF6FF" />
         <EditRowStyle BackColor="#2461BF" ForeColor="#DFF6FF" />
         <EmptyDataRowStyle ForeColor="#DFF6FF" />
-        <FieldHeaderStyle Font-Names="Times New Roman" BackColor="#06283D" Font-Bold="True" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#06283D" ForeColor="#DFF6FF" />
+        <FieldHeaderStyle Font-Names="Times New Roman" BackColor="#06283D" Font-Bold="True" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#06283D" ForeColor="#DFF6FF" Font-Size="20px" />
+       
         <Fields>
             <asp:BoundField DataField="ServiceID" HeaderText="#" InsertVisible="False" ReadOnly="True" SortExpression="ServiceID" />
-            <asp:TemplateField HeaderText="Image" SortExpression="Image">
+            <asp:TemplateField SortExpression="Image">
                 <EditItemTemplate>
                     <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Image") %>'></asp:TextBox>
                 </EditItemTemplate>
@@ -30,22 +34,22 @@
                     <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' Height="150px" Width="300px"/>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="ServiceName" HeaderText="Service" SortExpression="ServiceName" />
+            <asp:BoundField DataField="ServiceName" HeaderText="Name" SortExpression="ServiceName" />
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
             <asp:BoundField DataField="CategoryName" HeaderText="Category" SortExpression="CategoryName" />
             <asp:BoundField DataField="ServiceTime" HeaderText="Time" SortExpression="ServiceTime" />
             <asp:BoundField DataField="LeftQuantity" HeaderText="Quantity" SortExpression="LeftQuantity" />
-            <asp:BoundField DataField="UserName" HeaderText="Provider Name" SortExpression="UserName" />
+            <asp:BoundField DataField="UserName" HeaderText="Doner Name" SortExpression="UserName" />
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-            <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
+            <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" />
             <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
             <asp:BoundField DataField="UserStatus" HeaderText="Status" SortExpression="UserStatus" />
         </Fields>
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#06283D" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#06283D" />
         <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#06283D" Font-Names="Times New Roman" Font-Size="25px" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#06283D" ForeColor="#DFF6FF" />
-    </asp:DetailsView> </div>
+        <RowStyle BackColor="#06283D" Font-Names="Times New Roman" Font-Size="25px" HorizontalAlign="Justify" VerticalAlign="Middle" BorderColor="#06283D" ForeColor="#DFF6FF" BorderStyle="Inset" />
+    </asp:DetailsView> </div></div>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project6ConnectionString %>" SelectCommand="SELECT * FROM Services INNER JOIN AspNetUsers ON Services.ProviderID = AspNetUsers.Id And ServiceID=@Id" DeleteCommand="DELETE FROM [AspNetUsers] WHERE [Id] = @Id" InsertCommand="INSERT INTO [AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [City], [UserStatus]) VALUES (@Id, @Email, @EmailConfirmed, @PasswordHash, @SecurityStamp, @PhoneNumber, @PhoneNumberConfirmed, @TwoFactorEnabled, @LockoutEndDateUtc, @LockoutEnabled, @AccessFailedCount, @UserName, @City, @UserStatus)" UpdateCommand="UPDATE [AspNetUsers] SET [Email] = @Email, [EmailConfirmed] = @EmailConfirmed, [PasswordHash] = @PasswordHash, [SecurityStamp] = @SecurityStamp, [PhoneNumber] = @PhoneNumber, [PhoneNumberConfirmed] = @PhoneNumberConfirmed, [TwoFactorEnabled] = @TwoFactorEnabled, [LockoutEndDateUtc] = @LockoutEndDateUtc, [LockoutEnabled] = @LockoutEnabled, [AccessFailedCount] = @AccessFailedCount, [UserName] = @UserName, [City] = @City, [UserStatus] = @UserStatus WHERE [Id] = @Id">
         <DeleteParameters>
             <asp:Parameter Name="Id" Type="String" />
