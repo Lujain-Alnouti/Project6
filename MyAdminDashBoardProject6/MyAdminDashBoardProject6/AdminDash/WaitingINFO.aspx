@@ -94,7 +94,7 @@
 /*          
 */       }
           .donmar{
-               margin-left:27%;
+               margin-left:25%;
                width:65%;
                text-align:center;
            }

@@ -84,8 +84,26 @@
                margin-left:32.2%;
                width:55%
            }
+                .searchtextbox{
+              height: 35px;
+    width: 405px;
+          }
+         
        @media only screen and (min-device-width:0px) and (max-device-width:480px) {
-
+           .gridmarginleft {
+    width: 100%;
+    margin-left: 0%;
+}
+           .searchtextbox{
+               height: 35px;
+    width: 90%;
+    margin-bottom: 20px;
+           }
+           .divv {
+    width: 95%;
+    margin-left: 2%;
+    text-align: center;
+}
        }
 
        @media (min-width: 481px) and (max-width:768px) {
@@ -103,6 +121,7 @@
                width:80%;
                
            }
+       }
        }
     </style>
 </head>
