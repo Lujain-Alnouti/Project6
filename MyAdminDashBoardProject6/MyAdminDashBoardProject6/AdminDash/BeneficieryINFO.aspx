@@ -34,7 +34,197 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
    <style>
-    #weatherWidget .currentDesc {
+               
+.footer-distributed{
+	background: #06283D;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 20px 50px;
+    position:relative;
+    bottom:0px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #39B5E0;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  white;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #39B5E0;
+	text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+       @media (max-width: 880px) {
+
+           .footer-distributed {
+               font: bold 14px sans-serif;
+           }
+
+               .footer-distributed .footer-left,
+               .footer-distributed .footer-center,
+               .footer-distributed .footer-right {
+                   display: block;
+                   width: 100%;
+                   margin-bottom: 40px;
+                   text-align: center;
+               }
+               .footer-distributed h3{
+	color:  #ffffff;
+	font: normal 22px 'Open Sans', cursive;
+	margin: 0;
+}
+       }
+
+
+
+
+
+/*       *********************************
+*/    #weatherWidget .currentDesc {
         color: #ffffff!important;
     }
         .traffic-chart {
@@ -68,6 +258,7 @@
             height: 160px;
         }
         .gridmarginleft{
+             width:55%;
             margin-left:32.2%;
         }
          .divv {
@@ -80,8 +271,26 @@
                margin-left:32.2%;
                width:55%
            }
+          .searchtextbox{
+              height: 35px;
+    width: 405px;
+          }
+         
        @media only screen and (min-device-width:0px) and (max-device-width:480px) {
-
+           .gridmarginleft {
+    width: 100%;
+    margin-left: 0%;
+}
+           .searchtextbox{
+               height: 35px;
+    width: 90%;
+    margin-bottom: 20px;
+           }
+           .divv {
+    width: 95%;
+    margin-left: 2%;
+    text-align: center;
+}
        }
 
        @media (min-width: 481px) and (max-width:768px) {
@@ -114,7 +323,9 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <li><br /> <br /><br /></li>
                     <li class="active">
+
                         <asp:LinkButton ID="Dashboard" runat="server" OnClick="Dashboard_Click"><i class="menu-icon fa fa-laptop"></i>Dashboard </asp:LinkButton>
                         <%--<a href="index.html"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>--%>
                     </li>
@@ -158,8 +369,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"/></a>
-                    <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"/></a>
+                    <a class="navbar-brand" href="./"><img src="logo-don.png" alt="Logo"/></a>
+                    <a class="navbar-brand hidden" href="./"><img src="logo-don.png" alt="Logo"/></a>
                                       
 <%--                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>--%>
                 </div>
@@ -288,7 +499,7 @@
                 
                  <br />
                 <div class="divv">
-                <asp:TextBox ID="SerSearch" runat="server" Height="35px" Width="405px"></asp:TextBox>
+                <asp:TextBox ID="SerSearch" runat="server" CssClass="searchtextbox"></asp:TextBox>
                 <asp:Button ID="serser" runat="server" BackColor="#39B5E0" BorderColor="#39B5E0" ForeColor="black" Height="30px" Text="Search" Width="70px" Font-Size="14px" style="margin-left:10px"/></div>
                 <br />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project6ConnectionString %>" 
@@ -303,7 +514,7 @@
             <br />
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                <ContentTemplate>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id,UserId,RoleId" DataSourceID="SqlDataSource1" CssClass="table table-striped gridmarginleft" Width="55%" OnRowUpdating="GridView1_RowUpdating">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id,UserId,RoleId" DataSourceID="SqlDataSource1" CssClass="table table-striped gridmarginleft" OnRowUpdating="GridView1_RowUpdating">
                 <Columns>
                     <asp:TemplateField HeaderText="Beneficiary" SortExpression="UserName">
                         <EditItemTemplate>
@@ -354,6 +565,8 @@
 
         
         </div>
+
+        
     </form>
 </body>
 </html>

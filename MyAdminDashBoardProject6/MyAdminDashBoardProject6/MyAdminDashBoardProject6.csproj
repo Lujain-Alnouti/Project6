@@ -217,6 +217,7 @@
     <Content Include="AdminDash\AdminDashBoard.aspx" />
     <Content Include="AdminDash\BeneficieryINFO.aspx" />
     <Content Include="AdminDash\DonerINFO.aspx" />
+    <Content Include="AdminDash\logo-don.png" />
     <Content Include="AdminDash\WaitingINFO.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
