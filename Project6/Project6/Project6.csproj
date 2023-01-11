@@ -152,6 +152,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aaaaasdfCSS\css\cs-skin-elastic.css" />
+    <Content Include="aaaaasdfCSS\css\lib\chosen\chosen-sprite%402x.png" />
+    <Content Include="aaaaasdfCSS\css\lib\chosen\chosen-sprite.png" />
+    <Content Include="aaaaasdfCSS\css\lib\chosen\chosen.css" />
+    <Content Include="aaaaasdfCSS\css\lib\chosen\chosen.min.css" />
+    <Content Include="aaaaasdfCSS\css\lib\datatable\buttons.bootstrap.min.css" />
+    <Content Include="aaaaasdfCSS\css\lib\datatable\buttons.dataTables.min.css" />
+    <Content Include="aaaaasdfCSS\css\lib\datatable\dataTables.bootstrap.min.css" />
+    <Content Include="aaaaasdfCSS\css\lib\vector-map\jqvmap.min.css" />
+    <Content Include="aaaaasdfCSS\css\style.css" />
+    <Content Include="aaaaasdfCSS\fonts\icomoon\icomoon.svg" />
+    <Content Include="aaaaasdfCSS\fonts\icomoon\index.html" />
+    <Content Include="aaaaasdfCSS\js\dashboard.js" />
+    <Content Include="aaaaasdfCSS\js\init\chartjs-init.js" />
+    <Content Include="aaaaasdfCSS\js\init\datatables-init.js" />
+    <Content Include="aaaaasdfCSS\js\init\flot-chart-init.js" />
+    <Content Include="aaaaasdfCSS\js\init\fullcalendar-init.js" />
+    <Content Include="aaaaasdfCSS\js\init\gmap-init.js" />
+    <Content Include="aaaaasdfCSS\js\init\peitychart-init.js" />
+    <Content Include="aaaaasdfCSS\js\init\vector-init.js" />
+    <Content Include="aaaaasdfCSS\js\init\weather-init.js" />
+    <Content Include="aaaaasdfCSS\js\lib\chosen\chosen.jquery.js" />
+    <Content Include="aaaaasdfCSS\js\lib\chosen\chosen.jquery.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\chosen\chosen.proto.js" />
+    <Content Include="aaaaasdfCSS\js\lib\chosen\chosen.proto.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\buttons.bootstrap.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\buttons.colVis.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\buttons.flash.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\buttons.html5.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\buttons.print.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\dataTables.bootstrap.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\dataTables.buttons.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\datatables.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\jquery-1.12.4.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\jquery.dataTables.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\jszip.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\pdfmake.min.js" />
+    <Content Include="aaaaasdfCSS\js\lib\data-table\vfs_fonts.js" />
+    <Content Include="aaaaasdfCSS\js\lib\gmap\gmapApi.js" />
+    <Content Include="aaaaasdfCSS\js\lib\gmap\gmaps.js" />
+    <Content Include="aaaaasdfCSS\js\lib\gmap\gmaps.min.js" />
+    <Content Include="aaaaasdfCSS\js\main.js" />
+    <Content Include="aaaaasdfCSS\js\vmap.sampledata.js" />
+    <Content Include="aaaaasdfCSS\js\widgets.js" />
+    <Content Include="aaaaasdfCSS\scss\style.css" />
     <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -202,6 +247,14 @@
     <Content Include="ServiceDetails.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
+    <Content Include="WebForm6.aspx" />
+    <Content Include="[pokjhgfcxcfghjkl.aspx" />
+    <Content Include="aaaaasdfCSS\css\style.css.map" />
+    <Content Include="aaaaasdfCSS\fonts\icomoon\icomoon.eot" />
+    <Content Include="aaaaasdfCSS\fonts\icomoon\icomoon.ttf" />
+    <Content Include="aaaaasdfCSS\fonts\icomoon\icomoon.woff" />
+    <Content Include="aaaaasdfCSS\scss\style.css.map" />
+    <Content Include="aaaaasdfCSS\scss\style.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -429,6 +482,20 @@
     </Compile>
     <Compile Include="WebForm5.aspx.designer.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm6.aspx.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm6.aspx.designer.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="[pokjhgfcxcfghjkl.aspx.cs">
+      <DependentUpon>[pokjhgfcxcfghjkl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="[pokjhgfcxcfghjkl.aspx.designer.cs">
+      <DependentUpon>[pokjhgfcxcfghjkl.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
